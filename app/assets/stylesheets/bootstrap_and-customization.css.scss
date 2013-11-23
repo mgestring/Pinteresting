@@ -1,7 +1,11 @@
-$body-bg:  #2ecc71;
-$navbar-inverse-link-color:    #27ae60;
-$navbar-inverse-bg:   #27ae60;
-$brand-primary:    #e67e22;
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
+
+$body-bg:  white;
+$navbar-inverse-link-color:    #2ecc71;
+$navbar-default-bg:   #2ecc71;
+$brand-primary:    #d35400;
 $jumbotron-bg:    #bdc3c7;
 
 @import 'bootstrap'; 
+
+.center {text-allign: center;}
