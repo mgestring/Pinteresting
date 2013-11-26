@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pon.description %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @pon.string %>
+</p>
+
+<%= link_to 'Edit', edit_pon_path(@pon) %> |
+<%= link_to 'Back', pons_path %>

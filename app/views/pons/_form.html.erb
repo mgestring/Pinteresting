@@ -1,0 +1,25 @@
+<%= form_for(@pon) do |f| %>
+  <% if @pon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pon.errors.count, "error") %> prohibited this pon from being saved:</h2>
+
+      <ul>
+      <% @pon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
