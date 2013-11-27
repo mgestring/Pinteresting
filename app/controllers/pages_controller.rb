@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def about
   end
 
-  def team
+  def therorlist
   end
+
 end
