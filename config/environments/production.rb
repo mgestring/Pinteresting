@@ -81,4 +81,15 @@ Pinteresting::Application.configure do
   # Required for Heroku
   # Note to set to actual host (must register a Dns First)
   config.action_mailer.default_url_options = {  :host =>  'localhost:3000'}
+
+  # Note, this controls Amazon S3 and modified the Heroku File. Uploads Images.
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
+
 end
