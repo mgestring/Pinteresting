@@ -6,10 +6,4 @@ class User < ActiveRecord::Base
 
   has_many :pins
 
-  validates :Company, presence: true
-
-  validates :Employee_Name, presence: true
-
-  validates :Employee_Title, presence: true
-
 end
