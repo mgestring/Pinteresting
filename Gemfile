@@ -17,6 +17,7 @@ gem  'masonry-rails', '~> 0.2.0'
 
 # Important major errors in this folder below this point. Oops.
 group :development , :test do
+gem 'pg'
 gem 'sqlite3'
 end
 
