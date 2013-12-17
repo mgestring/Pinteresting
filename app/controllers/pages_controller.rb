@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def therorlist
   end
 
+  def reportahire
+  end
+
+
 end
