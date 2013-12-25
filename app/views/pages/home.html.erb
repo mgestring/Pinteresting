@@ -3,10 +3,6 @@
 <h1> There is a $300 per month fee, per employee or contractor hired, to hire a person located on this database. This is a sucess fee and will only be due after the employee or contractor is hired. <h1>
 <% user_signed_in? %>
 <% else %>
-<p>
-<%= link_to "Sign up", new_user_registration_path , class: 'btn-primary btn-lg' %>
-<%= link_to "Login", new_user_session_path , class: 'btn-success btn-lg' %>
-<p>	
 <div>
 	<h5> Terms and Conditions of Service. By accessing this data you and your company agree to the following. <h5>
 	<p> - If the user retains the services of an employee or contractor that is located in this database the user agrees to pay Ruby on Rails List $300 USD per month, per employee or contractor hired, during the entire length of the employee or contractors employment<p>
