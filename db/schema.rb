@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226164813) do
+ActiveRecord::Schema.define(version: 20131226183952) do
 
   create_table "logs", force: true do |t|
     t.string   "company_name"
-    t.string   "indiv_name"
+    t.string   "individual_name"
     t.string   "email"
     t.datetime "date_time"
     t.string   "ip"
