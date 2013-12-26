@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205203953) do
+ActiveRecord::Schema.define(version: 20131226164813) do
+
+  create_table "logs", force: true do |t|
+    t.string   "company_name"
+    t.string   "indiv_name"
+    t.string   "email"
+    t.datetime "date_time"
+    t.string   "ip"
+  end
 
   create_table "pins", force: true do |t|
     t.string   "description"
