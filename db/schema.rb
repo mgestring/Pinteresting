@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131205203953) do
+ActiveRecord::Schema.define(version: 20131226183952) do
+
+  create_table "logs", force: true do |t|
+    t.string   "company_name"
+    t.string   "individual_name"
+    t.string   "email"
+    t.datetime "date_time"
+    t.string   "ip"
+  end
 
   create_table "pins", force: true do |t|
     t.string   "description"
@@ -26,13 +34,6 @@ ActiveRecord::Schema.define(version: 20131205203953) do
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
-
-  create_table "pons", force: true do |t|
-    t.string   "description"
-    t.string   "string"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -49,7 +50,6 @@ ActiveRecord::Schema.define(version: 20131205203953) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "Company"
-    t.string   "employeename"
     t.string   "Employee_Name"
     t.string   "Employee_Title"
   end

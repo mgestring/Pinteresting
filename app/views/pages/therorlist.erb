@@ -1,54 +1,58 @@
 <h1> Ruby on Rails List <h1>
 
-<h3> Mike Gestring<h3>
-<p> Beginner Ruby on Rails Developpment Experience (created this site)<p>
-<p> Location: Denver,CO
-<p> MBA <p>
-<p> BSBA Real Estate Finance <p>
-<p> Javelin Solutions, 12/10-4/13, Project Manager<p>
-<p> Newmark Grubb Knight Frank, 4/13-8/13, Transaction Manager <p>
-<p> Ruby on Rails List, 11/13-Present, President <p>	
-<a href="https://www.dropbox.com/s/mnnwtwazll7sdih/tim_coveney_resume_eo.doc" target="_blank"> Mike Gestring Resume </a>
+<!--
 
-<p> Alex B.
-<p> Advanced Ruby on Rails Developer <p>
-<p> Location: Denver,CO
-<p> 2 years self-employed web developer using wordpress and Ruby on Rails <p>
-<p> 4 years web developer for large organization using many programming languages <p>
-<p> 3.5 years as a web developer and Database Administrator <p>
-<p> Please download below resume for additional information <p>
-<a href="https://www.dropbox.com/s/4i8plt6zbkmkqa4/Alex%20Brinkman%20Resume.pdf" target="_blank"> Alex B. Resume </a>
+Creating the section (form) that will contain the following inputs:
 
-<p> Mark S. <p>
-<p> Advanced Ruby on Rails Developer <p>
-<p> Location: Arizona, needs to be confirmed <p>
-<p> Six years of overall experience working in technology <p>
-<p> Exerience Developing Multiple Websites <p>
-<p> Please download below resume for additional information <p>
-<a href="https://www.dropbox.com/s/cq2jwhyuuirpzfr/Mark_Sullivan_Ruby_Resume%20%20%281%29.docx" target="_blank"> Mark S. Resume </a>
+* Company name
+* Individual name
+* E-mail address
 
-<p> Tim C. <p>
-<p> Beginner Ruby on Rails Developer, lengthy experience with other programming languages <p>
-<p> Location: Louisville,CO <p>
-<p> 5 years as a software engineer for a large firm <p>
-<p> 3 years of mixed experience being a self employed software engineer <p>
-<p> Please download below resume for additional information <p>
-<a href="https://www.dropbox.com/s/mnnwtwazll7sdih/tim_coveney_resume_eo.doc" target="_blank"> Tim C. Resume </a>
+ps: the divs elements' CSS used here are defined according to Bootstrap
+See more at: http://getbootstrap.com/css/#grid-options
 
-<p> James V. <p>
-<p> Beginner Ruby on Rails Developer <p>
-<p> Location: Denver,CO <p>
-<p> Undergraduate degree in Business Marketing <p>
-<p> Masters Degree from Denver University, Business Intelligence <p>
-<p> Working on a Masters Degree from Denver University, Information and Computer Technology <p>
-<p> Is currently a student <p>
-<p> Please download below resume for additional information <p>
-<a href="https://www.dropbox.com/s/z1nmapgqskoclso/James.Volmert.Resume.doc" target="_blank"> James V. Resume </a>
+-->
 
-<p> Bryan H. <p>
-<p> Beginner Ruby on Rails Developer <p>
-<p> Location: Naperville,IL. Open to relocation <p>
-<p> Completed a 9 week Development Bootcamp in the Summer of 2013 <p>
-<p> Has been working on software development for about one year <p>
-<p> Please download below resume for additional information <p>
-<a href="https://www.dropbox.com/s/lou3an962310lka/Bryan%20Hancock%20Resume.docx" target="_blank"> Bryan H. Resume </a>
+<%= form_tag therorlist_path, hidden: @hide_form, role: 'form' do %>
+
+	<br />
+
+	<p class='text-muted' style="font-size: 80%;">
+		To see the content of this page, please submit the information below.
+	</p>
+
+	<br />
+	
+	<div class='form-group' style="font-size: 70%;">
+
+		<%= label_tag 'Company name'%>
+		<%= text_field_tag 'company_name', @company_name, :class => 'form-control', placeholder: 'Company name'%>
+
+	</div>
+
+	<div class='form-group' style="font-size: 70%;">
+
+		<%= label_tag 'Individual name'%>
+		<%= text_field_tag 'individual_name', @individual_name, :class => 'form-control', placeholder: 'Individual name' %>
+
+	</div>
+
+	<div class='form-group' style="font-size: 70%;">
+		
+		<%= label_tag 'E-mail address' %>
+		<%= email_field_tag 'email', @email, :class => 'form-control', placeholder: 'E-mail' %>
+
+	</div>
+
+	<br />
+
+	<div class='form-group'>
+		
+		<%= submit_tag 'Save', :class => 'btn btn-success' %>
+
+	</div>
+
+<% end %>
+
+<!-- Creating the section that will contain the page's content -->
+<%= render "pages/content/content_therorlist" if @hide_form%>
