@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def therorlist
 
   	@hide_form = params[:hide_form] || false
-  	@company_name = params[:company_name] || @company_name || ""
+  	@company_name = params[:company_name] || ""
   	@individual_name = params[:individual_name] || ""
   	@email = params[:email] || ""
 
@@ -33,13 +33,7 @@ class PagesController < ApplicationController
         individual_name: params[:individual_name],
         email: params[:email]) and return
   	end
-    
-    text = "Log created. Below are shown the log entries created till now:"
-    
-    Log.find(:all).each do |a|
-      text << "<br />" + " id: " + a.id.to_s + " company_name " + a.company_name + " individual_name " + a.individual_name + " email " + a.email + " date_time " + a.date_time.to_s + " ip " + a.ip
-    end
-    flash[:success] = text.html_safe
+
     redirect_to therorlist_path(hide_form: true) and return
 
   end
